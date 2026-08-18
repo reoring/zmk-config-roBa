@@ -119,6 +119,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <225>;
             quick-tap-ms = <0>;
+            require-prior-idle-ms = <125>;
         };
 
 
