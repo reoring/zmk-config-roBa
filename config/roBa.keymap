@@ -83,7 +83,7 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
         };
@@ -110,6 +110,17 @@
             quick-tap-ms = <0>;
             require-prior-idle-ms = <125>;
         };
+        ht_shift: ht_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <225>;
+            quick-tap-ms = <0>;
+        };
+
 
     };
 
@@ -119,8 +130,8 @@
         default_layer {
             bindings = <
 &ht_q_tab TAB Q    &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&ht_a_caps CAPSLOCK A  &kp S     &kp D         &lt_fclick 7 F                &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&ht_a_caps LEFT_CONTROL A  &kp S     &kp D         &lt_fclick 7 F                &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL SQT
+&ht_shift LEFT_SHIFT Z     &kp X     &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &ht_shift RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 1 SPACE  &lt_to_layer_0 1 INT_MUHENKAN      &kp BACKSPACE  &lt 2 ENTER                             &mt RIGHT_ALT DEL
             >;
 
