@@ -58,8 +58,9 @@
         os_mode {
             bindings = <&tog 8>;
             key-positions = <12 19>;
-            timeout-ms = <500>;
+            timeout-ms = <100>;
             slow-release;
+        };
 
     };
 
