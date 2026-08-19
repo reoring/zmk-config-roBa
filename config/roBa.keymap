@@ -58,7 +58,8 @@
         os_mode {
             bindings = <&tog 8>;
             key-positions = <12 19>;
-            timeout-ms = <175>;
+            timeout-ms = <300>;
+            require-prior-idle-ms = <150>;
         };
 
     };
