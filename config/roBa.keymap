@@ -55,6 +55,12 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
+        os_mode {
+            bindings = <&os_mode_toggle>;
+            key-positions = <12 19>;
+            timeout-ms = <500>;
+        };
+
     };
 
     macros {
@@ -63,6 +69,13 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
+        };
+
+        os_mode_toggle: os_mode_toggle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings = <&macro_press &tog 8>;
         };
 
     };
@@ -212,6 +225,14 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+        MAC {
+            bindings = <
+&trans  &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_ALT &kp LEFT_WIN &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
