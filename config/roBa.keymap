@@ -55,6 +55,11 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
+        os_mode {
+            bindings = <&tog 8>;
+            key-positions = <13 18>;
+        };
+
     };
 
     macros {
@@ -212,6 +217,14 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+        MAC {
+            bindings = <
+&trans  &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_ALT &kp LEFT_WIN &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
