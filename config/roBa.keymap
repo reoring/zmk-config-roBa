@@ -56,7 +56,7 @@
             key-positions = <24 25>;
         };
         os_mode {
-            bindings = <&tog 8>;
+            bindings = <&os_mode_toggle>;
             key-positions = <12 19>;
             timeout-ms = <500>;
         };
@@ -69,6 +69,14 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
+        };
+
+        os_mode_toggle: os_mode_toggle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&tog 8>;
         };
 
     };
