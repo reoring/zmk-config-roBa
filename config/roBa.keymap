@@ -121,6 +121,17 @@
             tapping-term-ms = <250>;
             quick-tap-ms = <0>;
         };
+        ht_enter_right_command: ht_enter_right_command {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_ENTER_RIGHT_COMMAND";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <250>;
+            quick-tap-ms = <0>;
+        };
+
 
 
 
@@ -134,7 +145,7 @@
 &ht_q_tab TAB Q    &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &ht_a_caps LEFT_CONTROL A  &kp S     &kp D         &lt_fclick 7 F                &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL SQT
 &kp Z                     &kp X     &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 1 SPACE  &lt_to_layer_0 1 INT_MUHENKAN      &ht_backspace_shift RIGHT_SHIFT BACKSPACE  &lt 2 ENTER                             &kp DEL
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 1 SPACE  &lt_to_layer_0 1 INT_MUHENKAN      &ht_backspace_shift RIGHT_SHIFT BACKSPACE  &ht_enter_right_command RIGHT_WIN ENTER    &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
