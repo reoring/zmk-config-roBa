@@ -76,7 +76,7 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&tog 8 &none>;
+            bindings = <&tog 8 &kp F24>;
         };
 
     };
