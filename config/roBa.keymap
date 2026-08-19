@@ -55,20 +55,10 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
-        os_mode_mac {
-            bindings = <&to 8>;
+        os_mode {
+            bindings = <&tog 8>;
             key-positions = <12 19>;
-            layers = <0>;
-            timeout-ms = <300>;
-            require-prior-idle-ms = <150>;
-        };
-
-        os_mode_winlinux {
-            bindings = <&to 0>;
-            key-positions = <12 19>;
-            layers = <8>;
-            timeout-ms = <300>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <500>;
         };
 
     };
