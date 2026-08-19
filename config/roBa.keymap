@@ -10,8 +10,8 @@
 
 &trackball {
     // When any of these layers are active, trackball reports scroll.
-    // Add FCLICK (7) so holding F turns vertical movement into scroll.
-    scroll-layers = <5 7>;
+    // Add FCLICK (8) so holding F turns vertical movement into scroll.
+    scroll-layers = <5 8>;
 
     // arrows {
     //     layers = <3>;
@@ -56,7 +56,7 @@
             key-positions = <24 25>;
         };
         os_mode {
-            bindings = <&tog 8>;
+            bindings = <&tog 7>;
             key-positions = <12 19>;
             timeout-ms = <100>;
             slow-release;
@@ -150,7 +150,7 @@
         default_layer {
             bindings = <
 &ht_q_tab TAB Q    &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&ht_a_caps LEFT_CONTROL A  &kp S     &kp D         &lt_fclick 7 F                &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL SQT
+&ht_a_caps LEFT_CONTROL A  &kp S     &kp D         &lt_fclick 8 F                &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL SQT
 &kp Z                     &kp X     &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 1 SPACE  &lt_to_layer_0 1 INT_MUHENKAN      &ht_backspace_shift RIGHT_SHIFT BACKSPACE  &ht_enter_right_command RIGHT_WIN ENTER    &kp DEL
             >;
@@ -214,20 +214,20 @@
             >;
         };
 
-        FCLICK {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
-            >;
-        };
         MAC {
             bindings = <
 &trans  &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LEFT_ALT &kp LEFT_WIN &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+        FCLICK {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
