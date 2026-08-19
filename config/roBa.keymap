@@ -56,10 +56,10 @@
             key-positions = <24 25>;
         };
         os_mode {
-            bindings = <&os_mode_toggle>;
+            bindings = <&tog 8>;
             key-positions = <12 19>;
             timeout-ms = <500>;
-        };
+            slow-release;
 
     };
 
@@ -71,12 +71,6 @@
             label = "TO_LAYER_0";
         };
 
-        os_mode_toggle: os_mode_toggle {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            bindings = <&macro_press &tog 8>;
-        };
 
     };
 
