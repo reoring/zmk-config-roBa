@@ -81,7 +81,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             tap-ms = <20>;
-            bindings = <&msc MOVE_Y(64)>, <&msc MOVE_Y(-64)>;
+            bindings = <&msc MOVE_Y(-64)>, <&msc MOVE_Y(64)>;
         };
 
         lt_to_layer_0: lt_to_layer_0 {
