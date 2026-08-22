@@ -77,6 +77,12 @@
     };
 
     behaviors {
+        scroll_encoder: scroll_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+        };
+
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
@@ -189,7 +195,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 1 SPACE  &ht_muhenkan_shift LEFT_SHIFT INT_MUHENKAN  &ht_backspace_shift RIGHT_SHIFT BACKSPACE  &ht_enter_right_command RIGHT_WIN ENTER    &lt_bt_select 10 DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         NUM {
