@@ -176,7 +176,7 @@
 &ht_q_tab TAB Q    &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &ht_a_caps LEFT_CONTROL A  &kp S     &lt_fast 9 D   &lt_fclick 8 F                &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL SQT
 &kp Z                     &kp X     &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 1 SPACE  &ht_muhenkan_shift LEFT_SHIFT INT_MUHENKAN  &ht_backspace_shift RIGHT_SHIFT BACKSPACE  &ht_enter_right_command RIGHT_WIN ENTER    &kp DEL
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 1 SPACE  &ht_muhenkan_shift LEFT_SHIFT INT_MUHENKAN  &ht_backspace_shift RIGHT_SHIFT BACKSPACE  &ht_enter_right_command RIGHT_WIN ENTER    &lt 10 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -231,7 +231,7 @@
 
         layer_6 {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4               &trans  &trans  &kp MINUS  &trans  &trans
+&trans        &trans        &trans        &trans        &trans                       &trans  &trans  &kp MINUS  &trans  &trans
 &trans  &trans        &trans        &kp ESC       &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &trans       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
@@ -260,6 +260,14 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+        BT_SELECT {
+            bindings = <
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4               &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
